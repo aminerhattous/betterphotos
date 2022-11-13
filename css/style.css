@@ -1,0 +1,334 @@
+/* Basic Setup */
+html {
+  box-sizing: border-box;
+}
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: url(.././img/background.jpg);
+  display: grid;
+  place-items: center;
+  height: 100vh;
+  /* variables */
+  --clr-main: #17b380;
+  --clr-dark-green: #192d28;
+  --clr-200-grey: #e8ecee;
+  --clr-400-grey: #a9adb0;
+  --clr-700-grey: #48494c;
+  --main-pd: 6px;
+}
+::placeholder {
+  text-transform: capitalize;
+  color: var(--clr-400-grey);
+}
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+img {
+  width: 100%;
+}
+.app {
+  width: 1174px;
+  height: 45rem;
+  display: grid;
+  grid-template-columns: 355px 1fr;
+  grid-template-rows: 65px 2fr 1fr;
+  color: #fff;
+  overflow: auto;
+}
+.green {
+  color: var(--clr-main);
+}
+/* styling start */
+/* header */
+header {
+  background: #fff;
+  grid-column: 1 / -1;
+}
+header nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header i {
+  color: var(--clr-400-grey);
+  cursor: pointer;
+}
+nav {
+  padding: 20px 10px;
+}
+nav > * {
+  flex: 1;
+}
+nav > *:not(.nav__logo) {
+  padding: var(--main-pd);
+}
+.nav__logo {
+  width: 100px;
+  flex: none;
+  display: flex;
+  justify-content: center;
+}
+.logo {
+  background: #17b380;
+  padding: var(--main-pd);
+  display: inline-block;
+  border-radius: 2px;
+  rotate: -4deg;
+  box-shadow: -4px 4px 0px 0px #2e886d;
+  translate: 0px -3px;
+}
+div.search {
+  background: var(--clr-200-grey);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 15px;
+  padding: 6px 20px;
+}
+.search input {
+  border: 0;
+  width: 90%;
+  background-color: inherit;
+  outline: none;
+}
+.nav__links {
+  justify-content: flex-end;
+  gap: 40px;
+}
+/* aside */
+aside {
+  padding: 0px 20px;
+  background: var(--clr-dark-green);
+  grid-column: 1 / 2;
+  grid-row: 2 / -1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 10px;
+  position: relative;
+}
+hgroup {
+  text-align: center;
+}
+.aside__title {
+  font-size: 2.5em;
+  text-transform: capitalize;
+  margin-bottom: 0;
+}
+
+.members__container {
+  display: flex;
+  align-items: center;
+}
+.aside__members img {
+  border-radius: 50%;
+  padding: 2px;
+  background-color: #fff;
+}
+.members__number {
+  translate: -20px;
+  color: var(--clr-400-grey);
+  white-space: nowrap;
+  font-size: 12px;
+}
+.members__number strong {
+  display: block;
+  font-size: 16px;
+  color: #fff;
+}
+.member--two {
+  translate: -12px 0px;
+}
+.member--three {
+  translate: -24px 0px;
+}
+.member--four {
+  translate: -36px 0px;
+}
+.member--five {
+  translate: -48px 0px;
+}
+
+.aside__cta {
+  text-align: center;
+  margin-top: 10px;
+}
+.cta__signup {
+  background-color: var(--clr-main);
+  color: #fff;
+  text-decoration: none;
+  display: block;
+  padding: 12px 0px;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+.cta__singin {
+  font-size: 14px;
+  color: var(--clr-400-grey);
+}
+.singin--green {
+  text-decoration: none;
+}
+.aside__photoupload {
+  background: rgb(255 255 255 / 0.03);
+  flex: 1;
+  width: 70%;
+  align-self: center;
+  display: grid;
+  place-items: center;
+  position: relative;
+}
+.upload {
+  text-align: center;
+}
+.upload__action--sub {
+  color: var(--clr-400-grey);
+  font-size: 14px;
+}
+.aside__photoupload::before,
+.aside__photoupload::after {
+  content: "";
+  width: 300%;
+  position: absolute;
+  left: -100%;
+  height: 0.5px;
+  background: rgb(255 255 255 / 0.2);
+}
+.aside__photoupload::before {
+  top: -10px;
+}
+.aside__photoupload::after {
+  bottom: -10px;
+}
+.aside__footer {
+  font-size: 12px;
+  color: var(--clr-400-grey);
+}
+
+/* gallery */
+.gallery {
+  grid-column: 2 / -1;
+  grid-row: 2 / 3;
+  background: #fff;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.col {
+  display: grid;
+  grid-template-columns: auto;
+}
+.gallery--col1 {
+  grid-template-rows: 2fr 1fr 1.2fr;
+}
+.gallery--col2 {
+  grid-template-rows: 1.5fr 1fr;
+}
+.gallery--col3 {
+  grid-template-rows: 1.5fr 1fr 1fr;
+}
+.image--one {
+  background: url(.././img/gallery-photo1.jpg);
+}
+.image--two {
+  background: url(.././img/gallery-photo2.jpg);
+}
+.image--three {
+  background: url(.././img/gallery-photo3.jpg);
+}
+.image--four {
+  background: url(.././img/gallery-photo4.jpg);
+}
+.image--five {
+  background: url(.././img/gallery-photo5.jpg);
+}
+.image--six {
+  background: url(.././img/gallery-photo6.jpg);
+}
+.image--seven {
+  background: url(.././img/gallery-photo7.jpg);
+}
+.image--eight {
+  background: url(.././img/gallery-photo8.jpg);
+}
+.gallery__image--container {
+  background-size: cover;
+  background-position: center;
+}
+.image--rating {
+  position: relative;
+  color: var(--clr-main);
+  padding: 6px 10px;
+  background-color: #fff;
+  translate: 6px 10px;
+  border-radius: 15px;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 33px;
+  transition: 250ms ease-in-out;
+  text-align: center;
+}
+.gallery__image--container:hover .image--rating {
+  width: 80%;
+}
+.rating--star {
+  translate: -2px;
+}
+.image--rating::after {
+  display: inline-block;
+  margin-left: 6px;
+  color: var(--clr-dark-green);
+  font-size: 14px;
+}
+.image--six .image--rating::after {
+  content: "8 Great angle";
+}
+.image--one .image--rating::after {
+  content: "10 Beautiful";
+}
+.image--three .image--rating::after {
+  content: "9 lightning could be better";
+}
+.image--four .image--rating::after {
+  content: "10 WOW";
+}
+.image--six .image--rating::after {
+  content: "8 Great angle";
+}
+
+/* footer */
+
+.main__footer {
+  display: flex;
+  align-items: center;
+  background: var(--clr-200-grey);
+  color: var(--clr-700-grey);
+  text-align: center;
+  gap: 10px;
+}
+.features {
+  flex: 1;
+}
+.features__img {
+  color: var(--clr-main);
+  font-size: 2em;
+  background: #fff;
+  border-radius: 50%;
+  width: 55px;
+  height: 55px;
+}
+.features__img::before {
+  translate: 0px 10px;
+  display: block;
+}
+.features__description {
+  font-size: 14px;
+}

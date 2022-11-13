@@ -15,14 +15,14 @@
 </head>
 
 <body>
-  <div class="wrapper">
+  <div class="app">
     <header>
       <nav>
         <div class="nav__logo">
           <span class="logo">10</span>
         </div>
         <div class="search">
-          <input type="search" name="search" id="search">
+          <input type="search" name="search" id="search" placeholder="search photos...">
           <i class="fa-solid fa-magnifying-glass"></i>
         </div>
         <ul class="nav__links">
@@ -32,84 +32,85 @@
         </ul>
       </nav>
     </header>
-    <main>
-      <aside>
+    <aside>
+      <hgroup>
         <h1 class="aside__title">how good are your <span class="aside__title--green green">photos</span>?</h1>
-        <p class="aside__subtitle">improve your photography skill by getting <span
-            class="subtitle__feed">feedback</span> from a jury and the community</p>
-        <ul class="aside__memebrs">
-          <li><img src="./img/myavatar.png" alt="member in the community"></li>
-          <li><img src="./img/myavatar.png" alt="member in the community"></li>
-          <li><img src="./img/myavatar.png" alt="member in the community"></li>
-          <li><img src="./img/myavatar.png" alt="member in the community"></li>
-          <li><img src="./img/myavatar.png" alt="member in the community"></li>
-          <li class="memebrs__number"><strong>+180,000</strong>already joined</li>
+        <p class="aside__subtitle">improve your photography skill by getting <a class="subtitle__feed">feedback</a>
+          from <em>a jury and the community</em></p>
+      </hgroup>
+      <div class="members__container">
+        <ul class="aside__members">
+          <li class="member--one"><img src="./img/myavatar.png" alt="member in the community"></li>
+          <li class="member--two"><img src="./img/myavatar.png" alt="member in the community"></li>
+          <li class="member--three"><img src="./img/myavatar.png" alt="member in the community"></li>
+          <li class="member--four"><img src="./img/myavatar.png" alt="member in the community"></li>
+          <li class="member--five"><img src="./img/myavatar.png" alt="member in the community"></li>
         </ul>
-        <div class="aside__cta">
-          <a class="cta__signup" href="#">sign me up &gt;</a>
-          <p class="cta__singin">already a member? <span class="singin--green green">sign in</span></p>
+        <p class="members__number"><strong>+180,000</strong>already joined</p>
+      </div>
+      <div class="aside__cta">
+        <a class="cta__signup" href="#">sign me up <i class="fa-solid fa-greater-than"></i></a>
+        <p class="cta__singin">already a member? <a href="#" class="singin--green green">sign in</a></p>
+      </div>
+      <div class="aside__photoupload">
+        <div class="upload">
+          <i class="fa-solid fa-cloud-arrow-up"></i>
+          <p class="upload__action">Drag and drop photo</p>
+          <p class="upload__action--sub">or <a href="#" class="action--green green">browse folder</a></p>
         </div>
-        <div class="aside__photoupload">
-          <div class="upload">
-            <i class="fa-solid fa-cloud-arrow-up"></i>
-            <p class="upload__action">drag and drop photo</p>
-            <p class="upload__action--sub">or <a href="#" class="action--green green">browse folder</a></p>
-          </div>
-        </div>
-        <footer class="aside__footer">
-          <p class="aside__copy"></p>
-          <p class="aside__terms">terms &amp; condition &nbsp;privacy policy</p>
-        </footer>
-      </aside>
-      <section>
-        <div class="gallery">
-          <div class="gallery__container gallery--rating">
-            <img src="./img/gallery-photo1.jpg" alt="gallery image">
-          </div>
-          <div class="gallery__container">
-            <img src="./img/gallery-photo2.jpg" alt="gallery image">
-          </div>
-          <div class="gallery__container gallery--rating">
-            <img src="./img/gallery-photo3.jpg" alt="gallery image">
-          </div>
-          <div class="gallery__container">
-            <img src="./img/gallery-photo4.jpg" alt="gallery image">
-          </div>
-          <div class="gallery__container">
-            <img src="./img/gallery-photo5.jpg" alt="gallery image">
-          </div>
-          <div class="gallery__container gallery--rating">
-            <img src="./img/gallery-photo6.jpg" alt="gallery image">
-          </div>
-          <div class="gallery__container gallery--rating">
-            <img src="./img/gallery-photo7.jpg" alt="gallery image">
-          </div>
-          <div class="gallery__container">
-            <img src="./img/gallery-photo8.jpg" alt="gallery image">
-          </div>
-        </div>
-      </section>
-      <footer class="main__footer">
-        <article class="featuers">
-          <i class="featuers__img fa-solid fa-image"></i>
-          <h2 class="featuers__title">upload photos</h2>
-          <p class="featuers__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum deserunt est
-            voluptas.</p>
-        </article>
-        <article class="featuers">
-          <i class="featuers__img fa-solid fa-star"></i>
-          <h2 class="featuers__title">get feedback</h2>
-          <p class="featuers__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum deserunt est
-            voluptas.</p>
-        </article>
-        <article class="featuers">
-          <i class="featuers__img fa-solid fa-gear"></i>
-          <h2 class="featuers__title">improve your skill</h2>
-          <p class="featuers__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum deserunt est
-            voluptas.</p>
-        </article>
+      </div>
+      <footer class="aside__footer">
+        <p class="aside__copy">&copy; 2050 BetterPhotos.</p>
+        <p class="aside__terms">terms &amp; condition &nbsp;privacy policy</p>
       </footer>
-    </main>
+    </aside>
+    <section class="gallery">
+      <div class="gallery--col1 col">
+        <div class="gallery__image--container image--one">
+          <div class="image--rating"><i class="rating--star fa-solid fa-star"></i></div>
+        </div>
+        <div class="gallery__image--container image--two"></div>
+        <div class="gallery__image--container image--three">
+          <div class="image--rating"><i class="rating--star fa-solid fa-star"></i></div>
+        </div>
+      </div>
+      <div class="gallery--col2 col">
+        <div class="gallery__image--container image--four">
+          <div class="image--rating"><i class="rating--star fa-solid fa-star"></i></div>
+        </div>
+        <div class="gallery__image--container image--five"></div>
+      </div>
+      <div class="gallery--col3 col">
+        <div class="gallery__image--container image--six">
+          <div class="image--rating"><i class="rating--star fa-solid fa-star"></i></div>
+        </div>
+        <div class="gallery__image--container image--seven"></div>
+        <div class="gallery__image--container image--eight"></div>
+      </div>
+    </section>
+    <footer class="main__footer">
+      <article class="features">
+        <i class="features__img fa-solid fa-image"></i>
+        <h2 class="features__title">Upload photos</h2>
+        <p class="features__description">Lorem ipsum dolor sit amet consec adipisicing elit. Nostrum deserunt
+          est
+          voluptas.</p>
+      </article>
+      <article class="features">
+        <i class="features__img fa-solid fa-star"></i>
+        <h2 class="features__title">Get feedback</h2>
+        <p class="features__description">Lorem ipsum dolor sit amet consec adipisicing elit. Nostrum deserunt
+          est
+          voluptas.</p>
+      </article>
+      <article class="features">
+        <i class="features__img fa-solid fa-gear"></i>
+        <h2 class="features__title">Improve your skill</h2>
+        <p class="features__description">Lorem ipsum dolor sit amet consec adipisicing elit. Nostrum deserunt
+          est
+          voluptas.</p>
+      </article>
+    </footer>
   </div>
 </body>
 
